@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generar Certificado</title>
+    <link rel="stylesheet" href="/static/styles2.css">
+    <style>
+        body {
+            background-image: url('/static/Imagenes/fondo-stars-web.png');
+            background-size: cover; 
+            background-repeat: no-repeat; 
+            background-position: center; 
+            margin: 0;
+            padding: 0;
+        }
+        .form-container {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 500px;
+            margin: auto;
+            margin-top: 100px;
+            position: relative; 
+        }
+        .top-right-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .top-right-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <a href="/static/another.html" class="bottom-right-button">Consultar Certificados</a>
+        <h1>Generar Certificado Académico</h1>
+        <form id="certificateForm">
+            <label for="id_ci">Código del Certificado:</label>
+            <input type="text" id="id_ci" name="id_ci" required>
+            <label for="studentName">Nombre del Estudiante:</label>
+            <input type="text" id="studentName" name="studentName" required>
+            <label for="degree">Título del Programa:</label>
+            <input type="text" id="degree" name="degree" required>
+            <label for="institution">Nombre de la Institución:</label>
+            <input type="text" id="institution" name="institution" required>
+            <label for="date">Fecha:</label>
+            <input type="date" id="date" name="date" required>
+            <button type="button" onclick="generateCertificate()">Generar Certificado</button>
+        </form>
+        <div id="resultContainer"></div>
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultar Certificados</title>
+    <link rel="stylesheet" href="styles2.css">
+    <style>
+        body {
+            background-image: url('Imagenes/fondo-stars-web.png');
+            background-size: cover; 
+            background-repeat: no-repeat; 
+            background-position: center; 
+            margin: 0;
+            padding: 0;
+        }
+        .form-container {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 500px;
+            margin: auto;
+            margin-top: 100px;
+            position: relative;
+        }
+        .bottom-right-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+        }
+        .bottom-right-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <a href="/" class="bottom-right-button">Generar Certificados</a>
+        <h1>Consultar Certificado Académico</h1>
+        <form id="searchForm">
+            <label for="id_ci">Código del Certificado:</label>
+            <input type="text" id="id_ci" name="id_ci" required>
+            <button type="button" onclick="searchCertificate()">Buscar Certificado</button>
+        </form>
+        <div id="resultContainer"></div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
