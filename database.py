@@ -3,10 +3,10 @@ import psycopg2
 
 def get_connection():
     conn = psycopg2.connect(
-        host="dpg-cqevpu9u0jms739kl9g0-a",
+        host="dpg-cqf04588fa8c73eg4tjg-a.oregon-postgres.render.com",
         port="5432",
-        user="clientes_web2_user",
-        password="vkN0UkzT0rMEgQT4H5nzKWsyJczqbEMc",
-        dbname="clientes_web2"
+        user="marcos123",
+        password="VyQMxUmYkmJbul7POI0Kkb1yEwfzIZpR",
+        dbname="clientesweb"
     )
     return conn
